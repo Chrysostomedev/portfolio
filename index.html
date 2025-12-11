@@ -14,14 +14,15 @@
     body { font-family: 'Poppins', sans-serif; transition: background 0.5s, color 0.5s; }
     a { text-decoration: none; }
 
-    body.light-mode { background: #e0f7fa; color: #111; }
-    body.dark-mode { background: #0f172a; color: #e0e7ff; }
+    body.light-mode { background: #e0f7fa; color: #110333; }
+    body.dark-mode { background: #070330; color: #e0e7ff; }
 
     /* Navbar */
-    nav.navbar { padding: 1rem 2rem; background: #111827; box-shadow: #00ffff; }
+    nav.navbar { padding: 1rem 2rem; background: #0c0422; box-shadow: #00ffff; }
     nav .navbar-brand { font-weight: 700; font-size: 1.5rem; }
-    nav .nav-link { color: #00bcd4; margin: 0 0.5rem; font-size: 1.0rem; transition: transform 0.3s, color 0.3s; }nav .navbar-toggler { border-color: #00bcd4; }
-    nav .nav-link :hover { transform: scale(1.3); color: #00ffff; }
+    nav .nav-link { color: #00bcd4; margin: 0 0.5rem; font-size: 1.0rem; transition: transform 0.3s, color 0.3s; }
+    nav .navbar-toggler { border-color: #00bcd4; }
+    nav .nav-link:hover { transform: scale(1.3); color: #0bf3e0; }
     nav .navbar-toggler-icon { color: #00bcd4; }
 
     /* Header / Hero */
@@ -34,12 +35,12 @@
     .tech-icons i:hover { transform: scale(1.3); color: #00bcd4; }
 
     /* Flip Cards Projet */
-    .flip-card { background-color: transparent; width: 280px; height: 200px; perspective: 1000px; margin: 1rem; }
-    .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
+    .flip-card { background-color: transparent; width: 300px; height: 300px; perspective: 1000px; margin: 1rem; }
+    .flip-card-inner { position: relative; width: 100%; height: 250PX; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
     .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
     .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 12px; display: flex; justify-content: center; align-items: center; padding: 1rem; color: #0db3dd; flex-direction: column; }
     .flip-card-front { background: rgba(0, 188, 212, 0.15); }
-    .flip-card-back { background: #0d47a1; transform: rotateY(180deg); }
+    .flip-card-back { background: #0c336d; transform: rotateY(180deg); }
     .flip-card-back a { color: #fff; margin-top: 0.5rem; font-weight: 600; }
 
     /* Section Titles */
@@ -62,7 +63,7 @@
     .hobby-item:hover { transform: scale(1.1); }
 
     /* Footer */
-    footer { background: #111827; color: #e0e7ff; padding: 2rem 1rem; text-align: center; }
+    footer { background: #0c0422; color: #e0e7ff; padding: 2rem 1rem; text-align: center; }
     footer a { color: #00bcd4; margin: 0 0.5rem; font-size: 1.5rem; transition: transform 0.3s, color 0.3s; }
     footer a:hover { transform: scale(1.3); color: #00ffff; }
 
@@ -151,7 +152,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">Moi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Mes compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Mes compétences</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
           <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
           <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbys</a></li>
@@ -234,12 +235,12 @@
   </div>
 </section>
 
-
+<br><br>
   <!-- ===== Projets ===== -->
   <section id="projects">
     <h2>Mes Projets</h2>
     <div class="cards-container">
-      <!-- Projet avec 2 captures -->
+      
        <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -256,7 +257,7 @@
           </div>
         </div>
       </div>
-
+<br><br>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -273,7 +274,8 @@
           </div>
         </div>
       </div>
-      <!-- Flip Card 2 -->
+      <br><br>
+      <!-- Flip Card 3 -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -290,7 +292,7 @@
           </div>
         </div>
       </div>
-
+<br><br>
 
       <div class="flip-card">
         <div class="flip-card-inner">
@@ -309,9 +311,9 @@
         </div>
       </div>
 
-
     </div>
   </section>
+<br><br><br>
 
   <!-- ===== Formation ===== -->
   <section id="formation">
@@ -344,16 +346,16 @@
     </div>
 </div>  
 </section>
-
+<br><br><br>
   <!-- ===== Expériences ===== -->
   <section id="experience">
     <h2>Expériences professionelle et entrepreneuriale</section></h2>
     <div class="timeline">
       <div class="timeline-item">
-        <img src="image/sos.jpg" alt="Stage">
+        <img src="image/sos.png" alt="Stage">
         <div>
          <b> <h5>Stage Développement Web</h5></b>
-          <p>Entreprise Sos Infortique Consultant- 2025</p>
+          <p>Entreprise SOS Informatique Consultant- 2025</p>
           <p>Création de sites web & PWA </p>
         </div>
       </div>
@@ -367,7 +369,7 @@
       </div>
     </div>
   </section>
-
+<br><br><br>
   <!-- ===== Passe-temps ===== -->
   <section id="hobbies">
     <h2>Passe-temps & Centres d'intérêt</h2>
