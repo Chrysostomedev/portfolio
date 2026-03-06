@@ -1,3 +1,51 @@
+// ===== WELCOME MODAL & BACKGROUND MUSIC =====
+const welcomeModal = document.getElementById('welcomeModal');
+const enterBtn = document.getElementById('enterBtn');
+const soundToggle = document.getElementById('soundToggle');
+
+// Créer l'élément audio pour la musique de fond
+const bgMusic = new Audio();
+// Vous devrez ajouter le fichier audio dans le dossier portfolio
+// Pour l'instant, on utilise une URL de placeholder
+bgMusic.src = 'audio/son.mp3'; // Ajoutez votre fichier audio ici
+bgMusic.loop = true;
+bgMusic.volume = 0.3;
+
+let soundEnabled = true;
+
+enterBtn.addEventListener('click', () => {
+  welcomeModal.classList.add('hidden');
+  
+  // Démarrer la musique si activée
+  if (soundEnabled) {
+    bgMusic.play().catch(err => {
+      console.log('Autoplay bloqué par le navigateur:', err);
+    });
+  }
+  
+  // Animation d'entrée
+  document.body.style.animation = 'fadeIn 1s ease';
+});
+
+soundToggle.addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  const icon = soundToggle.querySelector('i');
+  
+  if (soundEnabled) {
+    icon.className = 'fas fa-volume-up';
+    soundToggle.innerHTML = '<i class="fas fa-volume-up"></i> Son activé';
+    if (!welcomeModal.classList.contains('hidden')) {
+      // La musique démarrera au clic sur "Entrer"
+    } else {
+      bgMusic.play();
+    }
+  } else {
+    icon.className = 'fas fa-volume-mute';
+    soundToggle.innerHTML = '<i class="fas fa-volume-mute"></i> Son désactivé';
+    bgMusic.pause();
+  }
+});
+
 // ===== MODE TOGGLE =====
 const modeToggle = document.getElementById('modeToggle');
 const body = document.body;
@@ -26,6 +74,24 @@ function updateModeIcon() {
     icon.className = 'fas fa-moon';
   }
 }
+
+// ===== SCROLL TO TOP BUTTON =====
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 500) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 // ===== MOBILE MENU =====
 const mobileToggle = document.getElementById('mobileToggle');
@@ -494,9 +560,11 @@ const imageObserver = new IntersectionObserver((entries) => {
 images.forEach(img => imageObserver.observe(img));
 
 // ===== CONSOLE MESSAGE =====
-console.log('%c👋 Salut ! Tu es curieux ?', 'font-size: 20px; color: #00bcd4; font-weight: bold;');
-console.log('%cSi tu veux discuter de code, contacte-moi !', 'font-size: 14px; color: #00ffff;');
+console.log('%c🎨 Bienvenue dans l\'univers StomaDev !', 'font-size: 24px; color: #00bcd4; font-weight: bold; text-shadow: 0 0 10px #00bcd4;');
+console.log('%c👋 Salut ! Tu es curieux ?', 'font-size: 18px; color: #00ffff; font-weight: bold;');
+console.log('%cSi tu veux discuter de code, contacte-moi !', 'font-size: 14px; color: #00bcd4;');
 console.log('%c📧 stomadev@exemple.com', 'font-size: 12px; color: #0097a7;');
+console.log('%c🚀 Portfolio développé avec passion en Côte d\'Ivoire 🇨🇮', 'font-size: 12px; color: #00bcd4; font-style: italic;');
 
 // ===== ANALYTICS (Optional) =====
 // Track page views

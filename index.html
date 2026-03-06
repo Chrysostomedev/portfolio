@@ -16,6 +16,24 @@
 </head>
 <body class="light-mode">
 
+  <!-- Welcome Modal -->
+  <div class="welcome-modal" id="welcomeModal">
+    <div class="welcome-content">
+      <h2>🎨 Bienvenue dans l'univers StomaDev</h2>
+      <p>
+        Prépare-toi à vivre une expérience immersive unique. 
+        Découvre mon parcours, mes projets et ma passion pour la technologie.
+      </p>
+      <button class="welcome-btn" id="enterBtn">
+        <span>Entrer</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <div class="sound-toggle" id="soundToggle">
+        <i class="fas fa-volume-up"></i> Son activé
+      </div>
+    </div>
+  </div>
+
   <!-- Animated 3D Background -->
   <canvas id="canvas3d"></canvas>
   
@@ -25,6 +43,11 @@
   <!-- Mode Toggle -->
   <button class="mode-toggle" id="modeToggle">
     <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- Navigation -->
